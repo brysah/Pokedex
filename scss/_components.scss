@@ -6,14 +6,16 @@
     max-width: 12.1rem;
     padding: 0.6rem 0.4rem;
 
-    &.blue{
-        .icon{
+    &.blue {
+        .icon {
             background-color: rgba(63, 103, 186, 0.15);
         }
-        span{
+
+        span {
             color: #3F67BA;
         }
     }
+
     .icon {
         width: 2.6rem;
         height: 2.6rem;
@@ -29,7 +31,49 @@
         line-height: 150%;
         color: #C20001;
     }
-    
+
+}
+
+.search {
+    background-color: #FFFFFF;
+    border-radius: 122px;
+    height: 5.6rem;
+    max-width: 40.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 0.7rem;
+
+    input[type="text"] {
+        border: 0;
+        outline: none;
+        width: 80%;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #A0AFBA;
+
+        &::placeholder {
+            color: #A0AFBA;
+        }
+    }
+
+    button {
+        width: 4.2rem;
+        height: 4.2rem;
+        background: rgba(158, 185, 225, 0.1);
+        border: 1px solid #E1E9EF;
+        border-radius: 50%;
+        transition: border-color .3s;
+
+        &:hover {
+            border-color: rgba(62, 117, 195, 1);
+        }
+
+        @include displayFlexCenter;
+    }
 }
 
 body {
