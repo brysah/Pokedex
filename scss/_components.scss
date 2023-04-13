@@ -1,0 +1,38 @@
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 244px;
+    max-width: 12.1rem;
+    padding: 0.6rem 0.4rem;
+
+    &.blue{
+        .icon{
+            background-color: rgba(63, 103, 186, 0.15);
+        }
+        span{
+            color: #3F67BA;
+        }
+    }
+    .icon {
+        width: 2.6rem;
+        height: 2.6rem;
+        background-color: rgba(194, 0, 1, 0.15);
+        border-radius: 50%;
+        @include displayFlexCenter;
+        margin-right: 0.8rem;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #C20001;
+    }
+    
+}
+
+body {
+
+    background-color: black;
+}
