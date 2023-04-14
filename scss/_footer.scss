@@ -1,0 +1,28 @@
+footer {
+    width: 100%;
+    background-color: rgba(63, 93, 179, 1);
+    padding-top: 6.7rem;
+    padding-bottom: 6.5rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+            h3 {
+                color: white;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 180%;
+                color: rgb(255, 255, 255,0.8);
+            }
+        }
+        a{
+            display: block;
+        }
+    }
+}
