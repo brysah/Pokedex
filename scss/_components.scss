@@ -104,25 +104,25 @@
 
     &.ghost {
         span {
-            color: #616EB7;
+            color: var(#616EB7);
         }
     }
 
     &.bug {
         span {
-            color: #9BBA48;
+            color: var(#9BBA48);
         }
     }
 
     &.dark {
         span {
-            color: #595761;
+            color: var(#595761);
         }
     }
 
     &.dragon {
         span {
-            color: #2C6AC1;
+            color: var(#2C6AC1);
         }
     }
 
@@ -229,7 +229,7 @@
     &.ghost {
         .image {
             &:after {
-                background-color: #616EB7;
+                background-color: var(#616EB7);
                 opacity: 0.3;
             }
         }
@@ -239,7 +239,7 @@
     &.bug {
         .image {
             &:after {
-                background-color: #9BBA48;
+                background-color: var(#9BBA48);
                 opacity: 0.3;
             }
         }
@@ -249,7 +249,7 @@
     &.dark {
         .image {
             &:after {
-                background-color: #595761;
+                background-color: var(#595761);
                 opacity: 0.3;
             }
         }
@@ -259,7 +259,7 @@
     &.dragon {
         .image {
             &:after {
-                background-color: #2C6AC1;
+                background-color: var(#2C6AC1);
                 opacity: 0.3;
             }
         }
@@ -269,7 +269,7 @@
     &.eletric {
         .image {
             &:after {
-                background-color: #eed967;
+                background-color: var(#eed967);
                 opacity: 0.3;
             }
         }
@@ -440,7 +440,7 @@
     letter-spacing: -0.01em;
 
     &.bug {
-        color: #9BBA48;
+        color: var(#9BBA48);
         background-color: rgba(155, 186, 72, 0.1);
     }
 
