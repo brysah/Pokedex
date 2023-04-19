@@ -15,3 +15,10 @@ cardPokemon.forEach(card => {
 })
 
 btnCloseModal.addEventListener('click',closeDetailsPokemon);/*/
+var slide_hero = new Swiper(".slide-hero", {
+  effect: 'fade',
+  pagination: {
+    el: ".slide-hero .swiper-wrapper .swiper-pagination",
+    clickable:true
+  },
+});
