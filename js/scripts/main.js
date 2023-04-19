@@ -1,4 +1,4 @@
-const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
+/*/const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
 const btnCloseModal = document.querySelector('.js-close-modal');
 
 function openDetailsPokemon(){
@@ -14,4 +14,4 @@ cardPokemon.forEach(card => {
     
 })
 
-btnCloseModal.addEventListener('click',closeDetailsPokemon);
+btnCloseModal.addEventListener('click',closeDetailsPokemon);/*/
