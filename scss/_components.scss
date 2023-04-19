@@ -558,6 +558,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all .3s;
+
     &[type-pokemon-modal="grass"] {
         .left-container {
             background-image: url("../img/bg-types/grass.svg");
@@ -850,9 +851,11 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        &:not(:last-child){
+
+                        &:not(:last-child) {
                             margin-bottom: 1.3rem;
                         }
+
                         span {
                             font-weight: 400;
                             font-size: 1.2rem;
@@ -868,27 +871,31 @@
                             max-width: 28.3rem;
                             background-color: #EFF3F6;
                             height: 0.3rem;
+
                             .bar {
-                               position:absolute;
-                               top: 0;
-                               left: 0;
-                               width: 56%;
-                               height: 100%;
-                               background-color: #C20001;
-                               z-index: 0;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 56%;
+                                height: 100%;
+                                background-color: #C20001;
+                                z-index: 0;
                             }
+
                             .separator {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
                                 @include displayFlexCenter;
                                 width: 100%;
-                                li{
+
+                                li {
                                     width: 4px;
                                     height: 4px;
                                     background-color: #FFFFFF;
-                                    &:not(:first-child){
-                                      margin-left: 5.4rem;  
+
+                                    &:not(:first-child) {
+                                        margin-left: 5.4rem;
                                     }
                                 }
                             }
@@ -902,10 +909,13 @@
     }
 }
 
-.open-modal{
-    opacity: 1;
-    pointer-events: all;
-    .box{
-        transform: translateY(0);
+.open-modal {
+    .modal {
+        opacity: 1;
+        pointer-events: all;
+
+        .box {
+            transform: translateY(0);
+        }
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,12 @@
 </head>
 
 <body>
+    <button class="btn-load-more js-open-details-pokemon">clica</button>
 
     <div class="modal" type-pokemon-modal="grass">
         <div class="overlay"></div>
         <div class="box">
-            <button class="close"><img src="img/close.svg"></button>
+            <button class="close js-close-modal"><img src="img/close.svg"></button>
             <div class="left-container">
                 <div class="icon"> <img src="img/icon-types/grass.svg"> </div>
                 <div class="image"><img src="img/bulbasaur.svg"></div>
@@ -145,8 +146,8 @@
         </div>
     </div>
 
-    <script src="plugin.js"></script>
-    <script src="all.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>
