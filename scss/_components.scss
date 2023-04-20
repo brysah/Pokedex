@@ -83,7 +83,8 @@
     opacity: 0.6;
     transition: all .3s;
 
-    &:hover {
+    &:hover,
+    &.active {
         filter: grayscale(0%);
         opacity: 1;
     }
