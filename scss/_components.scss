@@ -391,7 +391,9 @@
         margin: 0 auto;
         margin-top: 1.4rem;
         position: relative;
-
+        .thumb-img{
+            max-width: 14.2rem;
+        }
         img {
             z-index: 1;
         }
@@ -426,6 +428,9 @@
                 line-height: 150%;
                 color: #7A7D80;
                 margin-bottom: 0.6rem;
+            }
+            h3{
+                text-transform: capitalize;
             }
         }
     }
