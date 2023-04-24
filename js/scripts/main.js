@@ -118,6 +118,7 @@ function closeDetailsPokemon() {
 }
 
 const areaTypes = document.getElementById('js-type-area');
+const areaTypesMobile = document.querySelector('.dropdown-select');
 
 axios({
   method: 'GET',
@@ -130,6 +131,7 @@ axios({
       if (index < 18) {
         let itemType = document.createElement('li');
         areaTypes.appendChild(itemType);
+        areaTypesMobile.appendChild(itemType);
 
         let btnType = document.createElement('button');
         btnType.classList = `type-filter ${type.name}`;
@@ -147,6 +149,9 @@ axios({
         let nameType = document.createElement('span');
         nameType.textContent = type.name;
         btnType.appendChild(nameType);
+        
+        
+
       }
 
 
