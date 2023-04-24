@@ -173,9 +173,11 @@ axios({
   })
   
 const btnLoadMore = document.getElementById('js-load-more');
+let countPagination = 10;
 
 function showMorePokemon(){
-  console.log("funciona");
+  listingPokemons(`https://pokeapi.co/api/v2/pokemon?limit=9&offset=${countPagination}`);
+  countPagination += 9;
 }
 
 btnLoadMore.addEventListener('click',showMorePokemon);
