@@ -118,7 +118,7 @@ function closeDetailsPokemon() {
 }
 
 const areaTypes = document.getElementById('js-type-area');
-const areaTypesMobile = document.querySelector('.dropdown-select');
+const areaTypesMobile = document.getElementById('js-dropdown-select');
 
 axios({
   method: 'GET',
@@ -130,25 +130,38 @@ axios({
 
       if (index < 18) {
         let itemType = document.createElement('li');
+        let itemTypeMobile = document.createElement('li');
         areaTypes.appendChild(itemType);
-        areaTypesMobile.appendChild(itemType);
+        areaTypesMobile.appendChild(itemTypeMobile);
 
         let btnType = document.createElement('button');
+        let btnTypeMobile = document.createElement('button');
         btnType.classList = `type-filter ${type.name}`;
+        btnTypeMobile.classList = `type-filter ${type.name}`;
         itemType.appendChild(btnType);
+        itemTypeMobile.appendChild(btnTypeMobile);
 
         let iconType = document.createElement('div');
+        let iconTypeMobile = document.createElement('div');
+        iconTypeMobile.classList = 'icon';
         iconType.classList = 'icon';
         btnType.appendChild(iconType);
+        btnTypeMobile.appendChild(iconTypeMobile);
 
         let imgType = document.createElement('img');
+        let imgTypeMobile = document.createElement('img');
         imgType.setAttribute('src', `img/icon-types/${type.name}.svg`);
+        imgTypeMobile.setAttribute('src', `img/icon-types/${type.name}.svg`);
         iconType.appendChild(imgType);
+        iconTypeMobile.appendChild(imgTypeMobile);
 
 
         let nameType = document.createElement('span');
+        let nameTypeMobile = document.createElement('span');
         nameType.textContent = type.name;
+        nameTypeMobile.textContent = type.name;
         btnType.appendChild(nameType);
+        btnTypeMobile.appendChild(nameTypeMobile);
         
         
 
@@ -158,3 +171,11 @@ axios({
 
     })
   })
+  
+const btnLoadMore = document.getElementById('js-load-more');
+
+function showMorePokemon(){
+  console.log("funciona");
+}
+
+btnLoadMore.addEventListener('click',showMorePokemon);
