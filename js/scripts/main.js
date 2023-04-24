@@ -9,13 +9,6 @@ var slide_hero = new Swiper(".slide-hero", {
 const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
 const btnCloseModal = document.querySelector('.js-close-modal');
 
-function openDetailsPokemon() {
-  document.documentElement.classList.add('open-modal');
-}
-
-function closeDetailsPokemon() {
-  document.documentElement.classList.remove('open-modal');
-}
 
 cardPokemon.forEach(card => {
   card.addEventListener('click', openDetailsPokemon);
@@ -26,7 +19,7 @@ btnCloseModal.addEventListener('click', closeDetailsPokemon);
 
 const areaPokemons = document.getElementById('js-list');
 
-function createCardPokemon(code,type,name,image){
+function createCardPokemon(code, type, name, image) {
   let card = document.createElement('button');
   card.classList = `card-pokemon js-open-details-pokemon ${type}`;
   areaPokemons.appendChild(card);
@@ -37,7 +30,7 @@ function createCardPokemon(code,type,name,image){
 
   let srcImage = document.createElement('img');
   srcImage.className = 'thumb-img';
-  srcImage.setAttribute('src',image);
+  srcImage.setAttribute('src', image);
   bgImage.appendChild(srcImage);
 
   let infoCardPokemon = document.createElement('div');
@@ -61,7 +54,7 @@ function createCardPokemon(code,type,name,image){
   infoCardPokemon.appendChild(areaIcon);
 
   let imgType = document.createElement('img');
-  imgType.setAttribute('src',`img/icon-types/${type}.svg`);
+  imgType.setAttribute('src', `img/icon-types/${type}.svg`);
   areaIcon.appendChild(imgType);
 
 }
@@ -85,15 +78,21 @@ function listingPokemons(urlApi) {
           url: `${urlApiDetails}`
         })
           .then(response => {
-            const{ name, id, sprites, types} = response.data;
+            const { name, id, sprites, types } = response.data;
             const infoCard = {
               nome: name,
               code: id,
               image: sprites.other.dream_world.front_default,
               type: types[0].type.name
             }
-            
-            createCardPokemon(infoCard.code,infoCard.type,infoCard.nome,infoCard.image);
+
+            createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+
+            const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
+
+            cardPokemon.forEach(card => {
+              card.addEventListener('click',openDetailsPokemon);
+            })
 
           })
 
@@ -103,3 +102,11 @@ function listingPokemons(urlApi) {
 }
 
 listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0');
+
+function openDetailsPokemon() {
+  document.documentElement.classList.add('open-modal');
+}
+
+function closeDetailsPokemon() {
+  document.documentElement.classList.remove('open-modal');
+}
