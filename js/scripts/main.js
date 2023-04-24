@@ -17,6 +17,12 @@ cardPokemon.forEach(card => {
 
 btnCloseModal.addEventListener('click', closeDetailsPokemon);
 
+const btnDropdownSelect = document.querySelector('.js-open-select-custom');
+
+btnDropdownSelect.addEventListener('click', () => {
+  btnDropdownSelect.parentElement.classList.toggle('active');
+})
+
 const areaPokemons = document.getElementById('js-list');
 
 function createCardPokemon(code, type, name, image) {
@@ -91,7 +97,7 @@ function listingPokemons(urlApi) {
             const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
 
             cardPokemon.forEach(card => {
-              card.addEventListener('click',openDetailsPokemon);
+              card.addEventListener('click', openDetailsPokemon);
             })
 
           })
@@ -110,3 +116,40 @@ function openDetailsPokemon() {
 function closeDetailsPokemon() {
   document.documentElement.classList.remove('open-modal');
 }
+
+const areaTypes = document.getElementById('js-type-area');
+
+axios({
+  method: 'GET',
+  url: 'https://pokeapi.co/api/v2/type'
+})
+  .then(response => {
+    const { results } = response.data;
+    results.forEach((type, index) => {
+
+      if (index < 18) {
+        let itemType = document.createElement('li');
+        areaTypes.appendChild(itemType);
+
+        let btnType = document.createElement('button');
+        btnType.classList = `type-filter ${type.name}`;
+        itemType.appendChild(btnType);
+
+        let iconType = document.createElement('div');
+        iconType.classList = 'icon';
+        btnType.appendChild(iconType);
+
+        let imgType = document.createElement('img');
+        imgType.setAttribute('src', `img/icon-types/${type.name}.svg`);
+        iconType.appendChild(imgType);
+
+
+        let nameType = document.createElement('span');
+        nameType.textContent = type.name;
+        btnType.appendChild(nameType);
+      }
+
+
+
+    })
+  })
